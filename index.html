@@ -9,13 +9,16 @@
         padding: 10px;
     }
     #button {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         background-color: white;
         border: 2px solid purple;
         border-radius: 10px;
         margin: 0 auto;
-        margin-top: 50px;
+        position: absolute; /* changed */
+        top: 50%; /* changed */
+        left: 50%; /* changed */
+        transform: translate(-50%, -50%); /* changed */
         cursor: pointer;
     }
 </style>
@@ -26,11 +29,11 @@
 
     <script>
         var counter = 0;
-        var counterelement = document.getElementById("counter");
+        var counterelement = document.getElementById("counter"); // changed
 
         function increasecounter() {
             counter++;
-            counterelement.textContent = "счетчик: " + counter;
+            counterelement.textContent = "счетчик: " + counter; // changed
         }
     </script>
 </body>
