@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    #counter {
+        font-size: 24px;
+        color: black;
+        text-align: center;
+        padding: 10px;
+    }
+    #button {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border: 2px solid purple;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 50px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div id="counter">Счетчик: 0</div>
+    <button id="button" onclick="increaseCounter()">Нажми меня!</button>
+
+    <script>
+        var counter = 0;
+        var counterElement = document.getElementById("counter");
+
+        function increaseCounter() {
+            counter++;
+            counterElement.textContent = "Счетчик: " + counter;
+        }
+    </script>
+</body>
+</html>
